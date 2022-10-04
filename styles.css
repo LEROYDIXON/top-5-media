@@ -91,7 +91,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: pink 9px 0 10px;
+    text-shadow: rgb(86, 9, 125) 9px 0 10px;
+    animation : move-to-right 2s;
 }
 
 
@@ -100,35 +101,38 @@ body {
     color: #eeaeca;
     font-weight: 700;
 }
-
-.title {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-    background-color: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-
-}
+ 
 
 /****************
-      GAMES
+  GAMES/ANIME/MUSIC
 *****************/
-.game-cards {
+.section-title {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(220, 2, 245, 0.501) 0%, rgb(69, 25, 76) 100%);
+    background-color: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgb(213, 19, 97) 100%);
+}
+
+.game-cards, .anime-cards, .music-cards {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    justify-content: space-evenly
+    margin: 100px;
+    display: flex;
+    justify-content: space-evenly;    
 }
 
 .image {
     position: relative;
     width: 400px;
-       
+    cursor: pointer; 
+    margin: 20px;
 }
 
 
-.game__img {
+.game__img, .anime__img, .music__img {
     display: block;
     width: 100%;
+    
 }
 
 .image__overlay {
@@ -157,6 +161,7 @@ body {
 }
 .image__overlay:hover > *{
     transform: translateY(0);
+    
 }
 
 .image__title {
@@ -166,19 +171,13 @@ body {
 
 .image__description {
     margin-top: 20px;
-    font-size: 17px
+    font-size: 17px;
 }
-
 
 
 /****************
-      ANIME
+  MEDIA QUERIES
 *****************/
-.anime {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
 
 
