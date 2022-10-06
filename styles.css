@@ -34,16 +34,28 @@ body {
 /****************
       NAV
 *****************/
-
 .nav-bar {
     width: 400px;
     background-color: #121227;
 }
 
+.nav-bar >* {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo{
+    position: relative;
+}
+
 .nav-bar img {
     width: 100px;
     height: 100px;
+
 }
+
 
 .nav-links ul li {
     font-size: 35px;
@@ -52,7 +64,7 @@ body {
     display: flex;
     align-items: center;
     padding: 40px;
-    animation: move-up 2s;
+    animation: move-up 2s; 
 
 }
 
@@ -104,7 +116,7 @@ body {
  
 
 /****************
-  GAMES/ANIME/MUSIC
+GAMES/ANIME/MUSIC
 *****************/
 .section-title {
     display: flex;
@@ -178,8 +190,8 @@ body {
 /****************
   MEDIA QUERIES
 *****************/
-
-
+@media(max-width: 700px){
+    
 
 /****************
     KEYFRAMES
