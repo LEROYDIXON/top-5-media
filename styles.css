@@ -20,7 +20,6 @@ body {
     background-size: cover;
     min-height: 100vh;
     width: 100%;
-    border: 6px solid plum;
 }
 
 
@@ -37,18 +36,16 @@ body {
 .nav-bar {
     width: 400px;
     background-color: #121227;
+
 }
 
-.nav-bar >* {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 999;
+.nav-bar>* {
+    position: fixed;
+    margin-left: 10px;
+
 }
 
-.logo{
-    position: relative;
-}
+
 
 .nav-bar img {
     width: 100px;
@@ -64,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     padding: 40px;
-    animation: move-up 2s; 
+    animation: move-up 2s;
 
 }
 
@@ -104,7 +101,7 @@ body {
     justify-content: center;
     align-items: center;
     text-shadow: rgb(86, 9, 125) 9px 0 10px;
-    animation : move-to-right 2s;
+    animation: move-to-right 2s;
 }
 
 
@@ -113,7 +110,7 @@ body {
     color: #eeaeca;
     font-weight: 700;
 }
- 
+
 
 /****************
 GAMES/ANIME/MUSIC
@@ -125,26 +122,30 @@ GAMES/ANIME/MUSIC
     background-color: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgb(213, 19, 97) 100%);
 }
 
-.game-cards, .anime-cards, .music-cards {
+.game-cards,
+.anime-cards,
+.music-cards {
     display: flex;
     flex-wrap: wrap;
     margin: 100px;
     display: flex;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
 }
 
 .image {
     position: relative;
     width: 400px;
-    cursor: pointer; 
+    cursor: pointer;
     margin: 20px;
 }
 
 
-.game__img, .anime__img, .music__img {
+.game__img,
+.anime__img,
+.music__img {
     display: block;
     width: 100%;
-    
+
 }
 
 .image__overlay {
@@ -171,9 +172,10 @@ GAMES/ANIME/MUSIC
 .image__overlay:hover {
     opacity: 1;
 }
-.image__overlay:hover > *{
+
+.image__overlay:hover>* {
     transform: translateY(0);
-    
+
 }
 
 .image__title {
@@ -190,33 +192,33 @@ GAMES/ANIME/MUSIC
 /****************
   MEDIA QUERIES
 *****************/
-@media(max-width: 700px){
-    
+@media(max-width: 700px) {
 
-/****************
+
+    /****************
     KEYFRAMES
 *****************/
 
-@keyframes move-to-right {
-    0% {
-        opacity: 0;
-        transform: translateY(50);
+    @keyframes move-to-right {
+        0% {
+            opacity: 0;
+            transform: translateY(50);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    @keyframes move-up {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
 
-@keyframes move-up {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
